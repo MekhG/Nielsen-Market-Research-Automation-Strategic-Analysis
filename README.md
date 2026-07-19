@@ -172,8 +172,8 @@ SANITIZER_ROLES = {
 }
 
 # Output template sheet names
-TEMPLATE_SHEET_STREPSILS = "Zestol"
-TEMPLATE_SHEET_DETTOL    = "Clearo"
+TEMPLATE_SHEET = "Zestol"
+TEMPLATE_SHEET = "Clearo"
 ```
 
 ### Running locally vs Colab
