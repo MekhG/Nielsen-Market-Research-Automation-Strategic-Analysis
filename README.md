@@ -100,7 +100,7 @@ files.download("/content/nielsen/output/Output_Filled.xlsx")
 ## Module Overview
 
 **`config.py`**
-The only file that needs to be edited between monthly runs. Contains all file paths, sheet names, header row positions, column name mappings, metric names, period column names, brand role definitions, geography mappings and output template coordinates. All logic files read from this file — never hardcode anything outside it.
+The only file that needs to be edited between monthly runs. Contains all file paths, sheet names, header row positions, column name mappings, metric names, period column names, brand role definitions, geography mappings and output template coordinates.
 
 **`loader.py`**
 Loads the Lozenge and Sanitizer Excel files into pandas DataFrames. Validates that all expected columns exist before reading any data — fails with a clear error message if columns are missing or renamed. Applies fuzzy matching to geography names to catch minor spelling or capitalisation differences between monthly files. Merges the two Sanitizer files with an explicit overlap rule: the main file takes priority for any geography appearing in both. Validates that both Sanitizer files have identical column structures before merging.
@@ -213,7 +213,7 @@ OUTPUT_DIR = "/content/nielsen/output"
 
 Within each block, columns follow this order: Mth 25, Mth 26, L3M 25, L3M 26, L6M 25, L6M 26, YTD 25, YTD 26, MAT 25, MAT 26.
 
-**Note:** East Zone, West Bengal, West Zone, Gujarat and Maharashtra are not present in the Lozenge source file. These rows are left blank in the Strepsils/Zestol sheet — this is a known source data limitation, not a code error.
+**Note:** East Zone, West Bengal, West Zone, Gujarat and Maharashtra are not present in the Lozenge source file. These rows are left blank in the Zestol sheet. This is a known source data limitation, not a code error.
 
 ---
 
@@ -288,7 +288,7 @@ Findings from the Market Dynamics Grid and Push vs Pull matrix feed directly int
 | Dual Problem | Split between trade and consumer activation |
 | Star geography | Maintenance and acceleration spend |
 
-Recommendations should always cite specific data points — for example: *"Allocate trade spend to Zone X because Store Count declined -54% MAT while velocity per store rose +133%, confirming a distribution problem not a demand problem."* Generic statements without data evidence are not sufficient.
+Recommendations should always cite specific data points, for example: *"Allocate trade spend to Zone X because Store Count declined -54% MAT while velocity per store rose +133%, confirming a distribution problem not a demand problem."* Generic statements without data evidence are not sufficient.
 
 ---
 
@@ -478,7 +478,7 @@ DECLINING(-)│   Both distribution                 │   Stores growing,       
 - **Sanitizer overlap rule:** Both Sanitizer files contain an ALL INDIA row. The main file takes priority — ALL INDIA rows from the Remaining file are dropped before combining. This is logged during every run.
 - **Competitor identification:** The competitor for each brand is configured in `config.py` and taken from the reporting brief. It is not calculated or discovered from the data.
 - **Manufacturer filter:** The Sanitizer file's Manufacturer column is not used as a filter. Brand Family and Product Name together are considered sufficient to identify the correct rows.
-- **MS Val% index values:** In the Sanitizer file, MS Val% figures for some geographies exceed 100%. These are treated as index values rather than traditional market share percentages — a known characteristic of certain Nielsen export formats. They are used directionally (change in value) rather than as absolute share figures.
+- **MS Val% index values:** In the Sanitizer file, MS Val% figures for some geographies exceed 100%. These are treated as index values rather than traditional market share percentages, a known characteristic of certain Nielsen export formats. They are used directionally (change in value) rather than as absolute share figures.
 - **Data accuracy:** Source data is assumed accurate as received from the agency. No error analysis is performed on the underlying values.
 - **Latest month:** April 2026 is the latest available month across all source files. All period references are anchored to this month.
 - **Output Template structure:** The writer assumes the template maintains its current row and column structure between monthly runs.
