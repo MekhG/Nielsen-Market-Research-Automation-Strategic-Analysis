@@ -27,13 +27,6 @@ nielsen_automation/
 
 Four demonstration files are included with fictional brand names to allow the pipeline to be tested without using proprietary Nielsen data. The file structure, column names, geography hierarchy, metric names and numeric value ranges are identical to the real files.
 
-| Real Name | Fake Name |
-|---|---|
-| STREPSILS | ZESTOL |
-| VICKS | MINTEX |
-| LOZENGES | THROAT DROPS |
-| DETTOL | CLEARO |
-| LIFEBUOY | PURESHIELD |
 
 **Files:**
 - `Lozenge Hotsheet.xlsx` — wide format, sheet `Cat x Brand x Seg`
