@@ -213,7 +213,7 @@ OUTPUT_DIR = "/content/nielsen/output"
 
 Within each block, columns follow this order: Mth 25, Mth 26, L3M 25, L3M 26, L6M 25, L6M 26, YTD 25, YTD 26, MAT 25, MAT 26.
 
-**Note:** East Zone, West Bengal, West Zone, Gujarat and Maharashtra are not present in the Lozenge source file. These rows are left blank in the Strepsils/Zestol sheet — this is a known source data limitation, not a code error.
+**Note:** East Zone, West Bengal, West Zone, Gujarat and Maharashtra are not present in the Lozenge source file. These rows are left blank in the Zestol sheet, this is a known source data limitation, not a code error.
 
 ---
 
