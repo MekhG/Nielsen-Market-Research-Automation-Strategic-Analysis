@@ -15,3 +15,23 @@ from loader import load_lozenge, load_sanitizer
 
 df_loz = load_lozenge()
 df_san = load_sanitizer()
+
+
+##Load Data for Investigation
+## Clears any cached module imports to ensure the latest version of each file is used,
+## then loads the Lozenge and Sanitizer DataFrames. All subsequent investigation cells depend on this cell being run first.
+
+import sys
+sys.path.append("/content/nielsen")
+
+from loader import load_lozenge, load_sanitizer
+from transformer import extract_lozenge_data, extract_sanitizer_data
+from writer import write_output
+
+df_loz = load_lozenge()
+df_san = load_sanitizer()
+
+loz_data = extract_lozenge_data(df_loz)
+san_data = extract_sanitizer_data(df_san)
+
+write_output(loz_data, san_data)
