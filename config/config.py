@@ -160,8 +160,8 @@ SANITIZER_OVERLAP_RULE = "main_file_priority"
 # OUTPUT TEMPLATE STRUCTURE
 # Do NOT change these unless the template itself changes.
 # -----------------------------------------------------------------------------
-TEMPLATE_SHEET = "Zestol"
-TEMPLATE_SHEET = "Clearo"
+TEMPLATE_SHEET_ZESTOL = "Zestol"
+TEMPLATE_SHEET_CLEARO = "Clearo"
 
 # Row numbers in the template (1-indexed, as Excel counts them)
 TEMPLATE_DATA_START_ROW = 7   # Row 7 = All India (Total)
