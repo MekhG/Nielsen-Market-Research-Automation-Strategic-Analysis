@@ -23,7 +23,7 @@ nielsen_automation/
 
 ---
 
-## Fake Demo Files
+## Demo Files
 
 Four demonstration files are included with fictional brand names to allow the pipeline to be tested without using proprietary Nielsen data. The file structure, column names, geography hierarchy, metric names and numeric value ranges are identical to the real files.
 
