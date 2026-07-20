@@ -252,13 +252,13 @@ Positive = gaining share. Negative = losing share. Dividing line = 0pp.
 
 ### 2. Push vs Pull Diagnostic Framework
 
-A 2×2 matrix that diagnoses why a geography is underperforming — whether the cause is a distribution failure (retail push) or a demand failure (consumer pull).
+A 2×2 matrix that diagnoses why a geography is underperforming, whether the cause is a distribution failure (retail push) or a demand failure (consumer pull).
 
 **X axis — Store Count MAT Change %**
 Whether numeric distribution (number of stores stocking the brand) is growing or declining.
 
 **Y axis — Velocity MAT Change %**
-Velocity = Sales Value ÷ Store Count. Whether the brand is generating more or less revenue per store — a proxy for consumer demand at the point of sale.
+Velocity = Sales Value ÷ Store Count. Whether the brand is generating more or less revenue per store, a proxy for consumer demand at the point of sale.
 
 **Four quadrants:**
 
